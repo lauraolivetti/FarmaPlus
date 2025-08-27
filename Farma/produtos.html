@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - FarmaPlus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-red sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-prescription2"></i> FarmaPlus
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="produtos.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#servicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contato">Contato</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="carrinho.html" class="btn btn-outline-light me-2">
+                        <i class="bi bi-cart"></i> <span class="badge bg-white text-red" id="cart-count">0</span>
+                    </a>
+                    <a href="login.html" class="btn btn-light text-red">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section-produtos">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold">Nossos Produtos</h1>
+                    <p class="lead">Encontre os melhores medicamentos e produtos para sua saúde</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtros de Categorias -->
+    <section class="py-4 bg-red-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-center mb-4 text-red">Categorias</h3>
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <a href="#" class="btn btn-outline-red m-2 categoria-btn active" data-categoria="todos">Todos</a>
+                        <a href="#" class="btn btn-outline-red m-2 categoria-btn" data-categoria="medicamentos">Medicamentos</a>
+                        <a href="#" class="btn btn-outline-red m-2 categoria-btn" data-categoria="cosmeticos">Cosméticos</a>
+                        <a href="#" class="btn btn-outline-red m-2 categoria-btn" data-categoria="higiene">Higiene Pessoal</a>
+                        <a href="#" class="btn btn-outline-red m-2 categoria-btn" data-categoria="vitaminas">Vitaminas</a>
+                        <a href="#" class="btn btn-outline-red m-2 categoria-btn" data-categoria="infantil">Infantil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h2 class="text-red">Nossa Loja</h2>
+                    <p>Encontre tudo o que precisa para sua saúde e bem-estar</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <select class="form-select w-50 ms-auto" id="ordenar-produtos">
+                        <option selected>Ordenar por</option>
+                        <option value="menor-preco">Menor Preço</option>
+                        <option value="maior-preco">Maior Preço</option>
+                        <option value="nome">Nome A-Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row" id="produtos-container">
+                <!-- Produtos serão carregados via JavaScript -->
+            </div>
+
+            <!-- Paginação -->
+            <nav aria-label="Page navigation" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link text-red" href="#" tabindex="-1">Anterior</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link bg-red border-red" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link text-red" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link text-red" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link text-red" href="#">Próxima</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h3>Assine nossa newsletter</h3>
+                    <p>Receba promoções exclusivas e dicas de saúde no seu e-mail.</p>
+                </div>
+                <div class="col-md-6">
+                    <form class="row g-2" id="newsletter-form">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control" placeholder="Seu e-mail" required>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-red w-100">Assinar</button>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="newsletterCheck" required>
+                                <label class="form-check-label small" for="newsletterCheck">
+                                    Concordo em receber comunicações
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5>FarmaPlus</h5>
+                    <p>Sua farmácia de confiança, cuidando da sua saúde há mais de 20 anos.</p>
+                    <div class="d-flex">
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="sobre.html" class="text-white text-decoration-none">Sobre Nós</a></li>
+                        <li><a href="produtos.html" class="text-white text-decoration-none">Produtos</a></li>
+                        <li><a href="index.html#servicos" class="text-white text-decoration-none">Serviços</a></li>
+                        <li><a href="index.html#contato" class="text-white text-decoration-none">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Categorias</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Medicamentos</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Cosméticos</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Higiene Pessoal</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Vitaminas</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Produtos Infantis</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contato</h5>
+                    <address class="text-white">
+                        <i class="bi bi-geo-alt"></i> Av. Principal, 1234<br>
+                        Centro, São Paulo - SP<br>
+                        <i class="bi bi-telephone"></i> (11) 3456-7890<br>
+                        <i class="bi bi-whatsapp"></i> (11) 9 9999-8888<br>
+                        <i class="bi bi-envelope"></i> contato@farmaplus.com.br
+                    </address>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="row py-3">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 FarmaPlus - Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="text-white text-decoration-none">Política de Privacidade</a> | 
+                        <a href="#" class="text-white text-decoration-none">Termos de Uso</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script-produtos.js"></script>
+</body>
+</html>

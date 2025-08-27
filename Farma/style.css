@@ -1,0 +1,146 @@
+:root {
+    --primary-color: #dc3545;
+    --secondary-color: #bb2d3b;
+    --light-color: #f8d7da;
+    --dark-color: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Cores personalizadas */
+.bg-red {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-red-light {
+    background-color: var(--light-color) !important;
+}
+
+.text-red {
+    color: var(--primary-color) !important;
+}
+
+.btn-red {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.btn-red:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-outline-red {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-red:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/banner-principal.jpg') no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* Hero Section para a página Sobre */
+.hero-section-sobre {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/banner-sobre.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* Cards de produtos */
+.product-card {
+    transition: transform 0.3s;
+    border: 1px solid rgba(220, 53, 69, 0.2);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(220, 53, 69, 0.1);
+}
+
+/* Cards da equipe */
+.team-card {
+    transition: transform 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(220, 53, 69, 0.1);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: white;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: white;
+}
+
+.social-icon:hover {
+    color: var(--light-color);
+}
+
+/* Página de Login */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Página do Carrinho */
+.cart-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.cart-summary {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Formulários */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+/* Hero Section para a página Produtos */
+.hero-section-produtos {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/banner-produtos.jpg') no-repeat center center;
+    background-size: cover;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* Filtros de categoria */
+.categoria-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}

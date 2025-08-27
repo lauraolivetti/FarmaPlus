@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmaPlus - Sua Farmácia Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-red sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-prescription2"></i> FarmaPlus
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produtos.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="carrinho.html" class="btn btn-outline-light me-2">
+                        <i class="bi bi-cart"></i> <span class="badge bg-white text-red" id="cart-count">0</span>
+                    </a>
+                    <a href="login.html" class="btn btn-light text-red">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold">Sua saúde é nossa prioridade</h1>
+                    <p class="lead">Oferecemos medicamentos, produtos de beleza e cuidados pessoais com qualidade e preço justo.</p>
+                    <a href="produtos.html" class="btn btn-red btn-lg me-2">Nossos Produtos</a>
+                    <a href="#servicos" class="btn btn-outline-light btn-lg">Nossos Serviços</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0">
+                        <div class="card-body">
+                            <i class="bi bi-truck display-4 text-red"></i>
+                            <h3 class="card-title">Entrega Rápida</h3>
+                            <p class="card-text">Entregamos em toda a cidade em até 2 horas. Frete grátis para compras acima de R$ 50,00.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0">
+                        <div class="card-body">
+                            <i class="bi bi-shield-check display-4 text-red"></i>
+                            <h3 class="card-title">Produtos Originais</h3>
+                            <p class="card-text">Trabalhamos apenas com produtos originais e de alta qualidade de laboratórios reconhecidos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0">
+                        <div class="card-body">
+                            <i class="bi bi-clock-history display-4 text-red"></i>
+                            <h3 class="card-title">Atendimento 24h</h3>
+                            <p class="card-text">Nossa farmácia funciona 24 horas para atender suas emergências a qualquer momento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-5 bg-red-light" id="produtos">
+        <div class="container">
+            <h2 class="text-center mb-5">Produtos em Destaque</h2>
+            <div class="row" id="produtos-destaque">
+                <!-- Produtos serão carregados via JavaScript -->
+            </div>
+            <div class="text-center mt-4">
+                <a href="produtos.html" class="btn btn-outline-red btn-lg">Ver Todos os Produtos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5" id="servicos">
+        <div class="container">
+            <h2 class="text-center mb-5">Nossos Serviços</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex align-items-center justify-content-center bg-red text-white">
+                                <i class="bi bi-droplet display-3"></i>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title">Manipulação</h3>
+                                    <p class="card-text">Manipulamos medicamentos conforme prescrição médica, com dosagens personalizadas.</p>
+                                    <a href="#servicos" class="btn btn-outline-red">Saiba mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex align-items-center justify-content-center bg-red text-white">
+                                <i class="bi bi-heart-pulse display-3"></i>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title">Aferição de Pressão</h3>
+                                    <p class="card-text">Serviço gratuito de aferição de pressão arterial e orientação farmacêutica.</p>
+                                    <a href="#servicos" class="btn btn-outline-red">Saiba mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex align-items-center justify-content-center bg-red text-white">
+                                <i class="bi bi-chat-dots display-3"></i>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title">Atendimento Farmacêutico</h3>
+                                    <p class="card-text">Nossos farmacêuticos estão à disposição para orientar sobre o uso correto de medicamentos.</p>
+                                    <a href="#servicos" class="btn btn-outline-red">Saiba mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex align-items-center justify-content-center bg-red text-white">
+                                <i class="bi bi-telephone display-3"></i>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title">Tele-entrega</h3>
+                                    <p class="card-text">Receba seus medicamentos no conforto de sua casa. Ligações gratuitas.</p>
+                                    <a href="#servicos" class="btn btn-outline-red">Saiba mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h3>Assine nossa newsletter</h3>
+                    <p>Receba promoções exclusivas e dicas de saúde no seu e-mail.</p>
+                </div>
+                <div class="col-md-6">
+                    <form class="row g-2" id="newsletter-form">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control" placeholder="Seu e-mail" required>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-red w-100">Assinar</button>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="newsletterCheck" required>
+                                <label class="form-check-label small" for="newsletterCheck">
+                                    Concordo em receber comunicações
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-5" id="contato">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5>FarmaPlus</h5>
+                    <p>Sua farmácia de confiança, cuidando da sua saúde há mais de 20 anos.</p>
+                    <div class="d-flex">
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="sobre.html" class="text-white text-decoration-none">Sobre Nós</a></li>
+                        <li><a href="produtos.html" class="text-white text-decoration-none">Produtos</a></li>
+                        <li><a href="#servicos" class="text-white text-decoration-none">Serviços</a></li>
+                        <li><a href="#contato" class="text-white text-decoration-none">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Categorias</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="produtos.html" class="text-white text-decoration-none">Medicamentos</a></li>
+                        <li><a href="produtos.html" class="text-white text-decoration-none">Cosméticos</a></li>
+                        <li><a href="produtos.html" class="text-white text-decoration-none">Higiene Pessoal</a></li>
+                        <li><a href="produtos.html" class="text-white text-decoration-none">Vitaminas</a></li>
+                        <li><a href="produtos.html" class="text-white text-decoration-none">Produtos Infantis</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contato</h5>
+                    <address class="text-white">
+                        <i class="bi bi-geo-alt"></i> Av. Principal, 1234<br>
+                        Centro, São Paulo - SP<br>
+                        <i class="bi bi-telephone"></i> (11) 3456-7890<br>
+                        <i class="bi bi-whatsapp"></i> (11) 9 9999-8888<br>
+                        <i class="bi bi-envelope"></i> contato@farmaplus.com.br
+                    </address>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="row py-3">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 FarmaPlus - Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="text-white text-decoration-none">Política de Privacidade</a> | 
+                        <a href="#" class="text-white text-decoration-none">Termos de Uso</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
